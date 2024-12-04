@@ -1,0 +1,202 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #00bcd4;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed; /* Fija el footer en la posición */
+  bottom: 0;       /* Lo coloca en la parte inferior */
+  left: 0;         /* Alineación a la izquierda */
+  width: 100%;     /* Ocupa todo el ancho de la página */
+  z-index: 1000;   /* Asegura que esté sobre otros elementos */
+}
+
+/* Home */
+.home {
+  text-align: center;
+  padding: 2rem;
+}
+
+.home-swiper {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.home-swiper h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.home-swiper p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Projects */
+.projects-swiper {
+  margin: 2rem auto;
+  width: 80%;  /* Ajustado al 60% del ancho de la pantalla */
+  max-width: 100%; /* Tamaño máximo reducido a 500px */
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem; /* Reducido el padding */
+  text-align: center;
+  font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+}
+
+.project-card h3 {
+  font-size: 1.2rem; /* Reducir tamaño del título */
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.9rem; /* Reducir tamaño del texto */
+  color: #666;
+}
+
+.project-card img {
+  max-width: 80%; /* Hacer la imagen más pequeña */
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Estilo de las flechas de navegación del Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* Color de las flechas */
+  background-color: #f9f9f9; /* Fondo transparente */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* .swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7);  Cambia el fondo cuando se pasa el ratón 
+  color: #fff;  Cambia el color de la flecha al pasar el ratón 
+} */
+
+.swiper-button-next {
+  right: 10px; /* Coloca la flecha "next" a la derecha */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Coloca la flecha "prev" a la izquierda */
+}
+
+/* Contact */
+.contact {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.contact form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact form button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+  background-color: #0097a7;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
